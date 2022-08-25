@@ -14,3 +14,11 @@ export const Container = styled.div`
     margin-bottom: 35px;
   }
 `
+
+export const Box = styled.div`
+  display: flex;
+`
+
+
+export const Metrics = styled.div`
+`
