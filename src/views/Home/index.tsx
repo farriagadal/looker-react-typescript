@@ -2,6 +2,7 @@
 import React from 'react'
 import BoxEmbed from '../../components/BoxEmbed'
 import Embed from '../../components/Embed'
+import TableEmbed from '../../components/TableEmbed'
 import { Container, Box, Metrics } from './styles'
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
         </Metrics>
         <Embed />
       </Box>
+    <TableEmbed lookId={20}/>
     </Container>
   )
 }
