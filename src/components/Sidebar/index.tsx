@@ -6,6 +6,10 @@ import {
   CloseButton
 } from './styles'
 import { NavLink } from 'react-router-dom'
+import LogoSrc from '../../assets/logo-latam.svg'
+import CloseIcon from '../../assets/icons/close.svg'
+import AvatarIcon from '../../assets/avatar.jpg'
+import RightIcon from '../../assets/icons/right.svg'
 
 type SideBarProps = {
   onClose: () => void
@@ -17,7 +21,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
   const menuList = [
     {
       name: 'Inicio',
-      iconPath: '/icons/1-Home.svg',
+      iconPath: require('../../assets/icons/1-Home.svg'),
       route: '/',
       subLinks: [
         {
@@ -40,37 +44,37 @@ const Sidebar = ({ onClose }: SideBarProps) => {
     },
     {
       name: 'Dotación',
-      iconPath: '/icons/2-BarChart.svg',
+      iconPath: require('../../assets/icons/2-BarChart.svg'),
       route: '/dotacion'
     },
     {
       name: 'Acciones de personal',
-      iconPath: '/icons/3-FolderShared.svg',
+      iconPath: require('../../assets/icons/3-FolderShared.svg'),
       route: '/route1'
     },
     {
       name: 'Asig. Internacionales',
-      iconPath: '/icons/4-Language.svg',
+      iconPath: require('../../assets/icons/4-Language.svg'),
       route: '/route2'
     },
     {
       name: 'Staff Travel',
-      iconPath: '/icons/5-Group.svg',
+      iconPath: require('../../assets/icons/5-Group.svg'),
       route: '/route3'
     },
     {
       name: 'Eficiencias',
-      iconPath: '/icons/6-FactCheck.svg',
+      iconPath: require('../../assets/icons/6-FactCheck.svg'),
       route: '/route4'
     },
     {
       name: 'Inicio',
-      iconPath: '/icons/7-DonutLarge.svg',
+      iconPath: require('../../assets/icons/7-DonutLarge.svg'),
       route: '/route5'
     },
     {
       name: 'Vacaciones (días)',
-      iconPath: '/icons/8-DateRange.svg',
+      iconPath: require('../../assets/icons/8-DateRange.svg'),
       route: '/route6'
     }
   ]
@@ -80,18 +84,18 @@ const Sidebar = ({ onClose }: SideBarProps) => {
       {
         !isMobile
           ? <ImgLogo>
-              <img src="../../assets/logo-latam.svg" alt="logo" />
+              <img src={LogoSrc} alt="logo" />
             </ImgLogo>
           : <MobileSection>
               <CloseButton onClick={onClose}>
-                <img src="/icons/close.svg" />
+                <img src={CloseIcon} />
               </CloseButton>
               <Avatar>
-                <img src="/avatar.jpg" alt="avatar" />
+                <img src={AvatarIcon} alt="avatar" />
               </Avatar>
               <Name>
                 <p>Paula Fernandez</p>
-                <img src="/icons/right.svg" />
+                <img src={RightIcon} />
                 <span>Ver perfil</span>
               </Name>
             </MobileSection>

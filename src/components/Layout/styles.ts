@@ -9,3 +9,5 @@ export const Box = styled.div`
   width: 100%;
   background: #fafafa;
 `
+export const Content = styled.div`
+`

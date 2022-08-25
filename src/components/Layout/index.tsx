@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Sidebar from '../../components/Sidebar'
 import Header from '../../components/Header'
-import { Container, Box } from './styles'
+import { Container, Box, Content } from './styles'
 import NavMobile from '../NavMobile'
 import NavBarMobile from '../NavBarMobile'
 
@@ -15,7 +15,9 @@ const Layout = ({ children }: any) => {
       <Box>
         {isMobile ? <NavMobile setIsOpen={() => setIsOpen(true)} /> : <Header />}
         {isMobile && <NavBarMobile />}
-        {children}
+        <Content>
+          {children}
+        </Content>
       </Box>
     </Container>
   )
