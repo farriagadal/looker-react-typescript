@@ -80,7 +80,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
       {
         !isMobile
           ? <ImgLogo>
-              <img src="/logo-latam.svg" alt="logo" />
+              <img src="../../assets/logo-latam.svg" alt="logo" />
             </ImgLogo>
           : <MobileSection>
               <CloseButton onClick={onClose}>

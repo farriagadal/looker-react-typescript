@@ -4,7 +4,6 @@ import { ExtensionProvider } from '@looker/extension-sdk-react'
 import { hot } from 'react-hot-loader/root'
 import Layout from './components/Layout'
 import Embed from './components/Embed'
-import './index.css'
 
 export const App = hot(() => (
   <ExtensionProvider>
