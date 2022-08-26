@@ -6,15 +6,9 @@ type TableEmbedProps = {
   tableId: number,
   title: string
 }
-//1 productividad
-//2 vacantes
-
-
-
 
 const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
   const [tabSelected, setTabSelected] = useState(20)
-
 
   return (
       <ContainerPrincipal>
@@ -27,18 +21,32 @@ const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
           <a href="">País</a>
           <a onClick={() => setTabSelected(1)} className={`${tabSelected && 'isSelected'}`}>Población</a>
         </Menu>
-        { tabSelected ? <iframe
+        {(tableId === 1 && tabSelected) ? <iframe
         src={`https://latamdev.cloud.looker.com/embed/looks/21?show_title=false`}
         width="100%"
         height="100%"
         frameBorder="0"
         />:
+        tableId === 1 && !tabSelected ?
         <iframe
         src={`https://latamdev.cloud.looker.com/embed/looks/20?show_title=false`}
         width="100%"
         height="100%"
         frameBorder="0"
-        />}
+        />:
+        tableId === 2 && tabSelected ? <iframe
+          src={`https://latamdev.cloud.looker.com/embed/looks/23?show_title=false`}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          />:
+          <iframe
+          src={`https://latamdev.cloud.looker.com/embed/looks/22?show_title=false`}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          />
+        }
       </Container>
       </ContainerPrincipal>
   )
