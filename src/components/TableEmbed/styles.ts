@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-export const SubTitle = styled.div`
+export const ContainerPrincipal = styled.div`
   position: relative;
+  margin-right: 24px;
 
   h2 {
     font-size: 20px;

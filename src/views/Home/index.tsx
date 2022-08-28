@@ -17,7 +17,10 @@ const Home = () => {
         </Metrics>
         <Embed />
       </Box>
-    <TableEmbed lookId={20}/>
+      <Box>
+        <TableEmbed lookId={20} tableName={'Productividad'} />
+        <TableEmbed lookId={21} tableName={'Vacantes'} />
+      </Box>
     </Container>
   )
 }
