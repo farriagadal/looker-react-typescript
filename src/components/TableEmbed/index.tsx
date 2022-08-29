@@ -1,3 +1,4 @@
+import { type } from 'os'
 import React, { useState } from 'react'
 import { Container, Menu, ContainerPrincipal } from './styles'
 
@@ -8,6 +9,14 @@ type TableEmbedProps = {
 
 const TableEmbed = ({ lookId, tableName }: TableEmbedProps) => {
   const [tabSelected, setTabSelected] = useState(0)
+
+  const my_request = JSON.stringify({
+    type: 'dashboard:run'
+  }
+  )
+
+/*   const my_iframe = (document?.getElementById('looker') as HTMLIFrameElement)
+  my_iframe.contentWindow.postMessage(my_request, 'https://latamdev.cloud.looker.com/') */
 
   return (
       <ContainerPrincipal>
@@ -20,7 +29,8 @@ const TableEmbed = ({ lookId, tableName }: TableEmbedProps) => {
             <a href="">País</a>
             <a onClick={() => setTabSelected(1)} className={`${tabSelected && 'isSelected'}`}>Población</a>
           </Menu>
-          <iframe
+        <iframe
+          id='looker'
           src={`https://latamdev.cloud.looker.com/embed/looks/${lookId}?show_title=false`}
           width="100%"
           height="100%"
