@@ -1,6 +1,7 @@
 // import TableProductivity from '../../components/TableProductivity'
 import React from 'react'
 import BoxEmbed from '../../components/BoxEmbed'
+import DashboardHome from '../../components/DashboardHome'
 import Embed from '../../components/Embed'
 import { Container, Box, Metrics } from './styles'
 
@@ -9,12 +10,7 @@ const Home = () => {
     <Container>
       <h1>Dotación y Vacantes</h1>
       <Box>
-        <Metrics>
-          <BoxEmbed />
-          <BoxEmbed />
-          <BoxEmbed />
-        </Metrics>
-        <Embed />
+        <DashboardHome />
       </Box>
     </Container>
   )
