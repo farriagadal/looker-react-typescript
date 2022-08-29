@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-export const SubTitle = styled.div`
+export const ContainerPrincipal = styled.div`
   position: relative;
+  margin-right: 10px;
 
   h2 {
     font-size: 20px;
@@ -14,6 +15,11 @@ export const SubTitle = styled.div`
     content: '|';
     margin-right: 8px;
     color: #ed1650;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 388px;
+    height: 326px;
   }
 `
 

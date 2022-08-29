@@ -13,7 +13,10 @@ const Home = () => {
       <Box>
         <DashboardHome />
       </Box>
-    <TableEmbed lookId={20}/>
+      <Box>
+        <TableEmbed tableId={1} title={'Productividad'}/>
+        <TableEmbed tableId={2} title={'Vacantes'}/>
+      </Box>
     </Container>
   )
 }
