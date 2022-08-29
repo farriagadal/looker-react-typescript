@@ -16,6 +16,11 @@ export const ContainerPrincipal = styled.div`
     margin-right: 8px;
     color: #ed1650;
   }
+
+  @media screen and (max-width: 768px) {
+    max-width: 388px;
+    height: 326px;
+  }
 `
 
 export const Container = styled.div`
