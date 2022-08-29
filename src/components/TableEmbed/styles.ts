@@ -2,7 +2,11 @@ import styled from 'styled-components'
 
 export const ContainerPrincipal = styled.div`
   position: relative;
+<<<<<<< HEAD
   margin-right: 24px;
+=======
+  margin-right: 10px;
+>>>>>>> e82a4c6fdc122cb84ab76238e945aa4d43d160cc
 
   h2 {
     font-size: 20px;
@@ -15,6 +19,11 @@ export const ContainerPrincipal = styled.div`
     content: '|';
     margin-right: 8px;
     color: #ed1650;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 388px;
+    height: 326px;
   }
 `
 
