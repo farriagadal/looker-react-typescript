@@ -54,7 +54,8 @@ export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  a {
+
+  .menu {
     width: 100%;
     font-weight: 600;
     font-size: 16px;
@@ -69,16 +70,16 @@ export const Menu = styled.div`
     cursor: pointer;
   }
 
-  a:first-child {
+  .menu:first-child {
     border-top-left-radius: 10px;
   }
 
-  a:last-child {
+  .menu:last-child {
     border-top-right-radius: 10px;
     border-right: none;
   }
 
-  a:hover {
+  .menu:hover {
     color: #1b0088;
     border-bottom: 2px solid #ed1650;
     background-color: white;
@@ -88,16 +89,19 @@ export const Menu = styled.div`
     color: #1b0088;
     border-bottom: 2px solid #ed1650;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
   }
 
   @media screen and (max-width: 768px) {
   }
 `
+
 export const MenuList = styled.div`
-
-  position: absolute;
-  right: 20px;
-  top: 55px;
+  margin-top: -2px;
   cursor: pointer;
-
+  a {
+    background-color: #fff;
+  }
 `

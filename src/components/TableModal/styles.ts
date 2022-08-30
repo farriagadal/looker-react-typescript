@@ -13,11 +13,32 @@ justify-content: center;
 z-index: 1;
 `
 export const Container = styled.div`
-width: 500px;
+width: 717px;
+height: 480px;
 min-height: 100px;
 background: #fff;
 position: relative;
-border-radius: 5px;
-padding: 20px;
+border-radius: 8px;
+overflow: hidden;
+
+h3{
+    font-family: 'Latam Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #303030;
+    margin-top: 11px;
+    margin-bottom: 22px;
+}
 `
 
+export const Title = styled.div`
+    padding-top: 19px;
+    font-family: 'Latam Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1B0088;
+`
