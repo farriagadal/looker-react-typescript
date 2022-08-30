@@ -5,6 +5,9 @@ import { hot } from 'react-hot-loader/root'
 import Layout from './components/Layout'
 import Home from './views/Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import RHConnect from './views/RHConnect'
+import IncomeExits from './views/IncomeExits'
+import RemunerationAccount from './views/RemunerationAccount'
 
 export const App = hot(() => (
   <Router>
@@ -16,8 +19,14 @@ export const App = hot(() => (
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/dotacion">
-            <h1>Dotación</h1>
+          <Route exact path="/entradas-y-salidas">
+            <IncomeExits />
+          </Route>
+          <Route exact path="/cuentas-y-remuneraciones">
+            <RemunerationAccount />
+          </Route>
+          <Route exact path="/rh-connect">
+            <RHConnect />
           </Route>
         </Switch>
       </Layout>

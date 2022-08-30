@@ -38,7 +38,7 @@ const NavMenuTable = ({propNav}: PropNavTable) => {
 
   return (
     <>
-    {isOpen && <TableModal id={"modal"}/>}
+    {isOpen && <TableModal id={"modal"} onClose={() => setIsOpen(false)}/>}
 
     <MenuNav>
       <li>

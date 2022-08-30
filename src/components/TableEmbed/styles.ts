@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const ContainerPrincipal = styled.div`
   position: relative;
   margin-right: 10px;
+  width: 100%;
+  margin-top: 18px;
 
   h2 {
     font-size: 20px;
@@ -25,7 +27,7 @@ export const ContainerPrincipal = styled.div`
 
 export const Container = styled.div`
   position: relative;
-  max-width: 572px;
+  width: 100%;
   height: 422px;
   border-radius: 10px;
   justify-content: center;
@@ -53,11 +55,11 @@ export const Menu = styled.div`
   justify-content: space-between;
   position: relative;
   a {
+    width: 100%;
     font-weight: 600;
     font-size: 16px;
     line-height: 19.2px;
     text-align: center;
-    width: 114px;
     height: 44px;
     color: #929292;
     background-color: #ebebeb;

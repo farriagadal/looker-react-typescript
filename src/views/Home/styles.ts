@@ -36,11 +36,13 @@ export const Box = styled.div`
 export const Metrics = styled.div`
 `
 export const BoxTable = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
   flex-wrap: wrap;
 
-@media screen and (max-width: 768px) {
-flex-direction: column;
-}
-
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    row-gap: 24px;
+  }
 `
