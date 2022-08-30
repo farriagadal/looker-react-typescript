@@ -10,7 +10,7 @@ type TableEmbedProps = {
 }
 
 const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
-  const [tabSelected, setTabSelected] = useState(5)
+  const [tabSelected, setTabSelected] = useState(24)
 
   const [isOpenMenuTable, setIsOpenMenuTable] = useState(false)
   const [propNav, setPropNav] = useState(5)

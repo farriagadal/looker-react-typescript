@@ -101,5 +101,9 @@ export const MenuList = styled.div`
   cursor: pointer;
   a {
     background-color: #fff;
+    img:hover {
+      filter: invert(23%) sepia(93%) saturate(6437%) hue-rotate(336deg)
+        brightness(96%) contrast(93%);
+    }
   }
 `
