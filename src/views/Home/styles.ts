@@ -13,6 +13,19 @@ export const Container = styled.div`
     margin: 0;
     margin-bottom: 35px;
   }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #303030;
+  }
+
+  h2::before {
+    content: '|';
+    margin-right: 8px;
+    color: #ed1650;
+  }
 `
 
 export const Box = styled.div`

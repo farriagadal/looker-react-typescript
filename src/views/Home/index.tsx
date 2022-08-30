@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <Container>
       <h1>Dotación y Vacantes</h1>
+      <h2>Datos del mes</h2>
       <Box>
         <DashboardHome />
       </Box>
