@@ -34,6 +34,7 @@ export const Container = styled.div`
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
   margin-bottom: 50px;
   overflow: hidden;
+  margin-right: 10px;
 
   iframe {
     height: 404px;
@@ -89,4 +90,12 @@ export const Menu = styled.div`
 
   @media screen and (max-width: 768px) {
   }
+`
+export const MenuList = styled.div`
+
+  position: absolute;
+  right: 20px;
+  top: 55px;
+  cursor: pointer;
+
 `
