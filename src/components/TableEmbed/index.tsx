@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Container, Menu, ContainerPrincipal } from './styles'
+import NavMenuTable from '../NavMenuTable'
+import { Container, Menu, ContainerPrincipal, MenuList } from './styles'
+import MoreVertical from '../../../public/icons/more-vertical.svg'
 
 
 type TableEmbedProps = {
@@ -9,6 +11,27 @@ type TableEmbedProps = {
 
 const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
   const [tabSelected, setTabSelected] = useState(20)
+
+  const [isOpenMenuTable, setIsOpenMenuTable] = useState(false)
+  const [propNav, setPropNav] = useState(0)
+
+
+
+
+  const handleClick = (event: any) => {
+    event.preventDefault()
+    setIsOpenMenuTable(!isOpenMenuTable)
+
+    if (tableId === 1 && tabSelected) {
+     setPropNav(1)
+    }else{
+      if
+      (tableId === 1 && !tabSelected){
+      setPropNav(2)
+      }
+    }
+
+  }
 
   return (
       <ContainerPrincipal>
@@ -21,7 +44,22 @@ const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
           <a href="">País</a>
           <a onClick={() => setTabSelected(1)} className={`${tabSelected && 'isSelected'}`}>Población</a>
         </Menu>
-        {(tableId === 1 && tabSelected) ? <iframe
+
+        <MenuList>
+
+        <a onClick={handleClick} >
+
+          <img src={MoreVertical} alt="" />
+
+        </a>
+
+        {isOpenMenuTable && <NavMenuTable propNav={propNav} />}
+
+        </MenuList>
+
+        {(tableId === 1 && tabSelected) ?
+        <iframe
+        //Rol
         src={`https://latamdev.cloud.looker.com/embed/looks/21?show_title=false`}
         width="100%"
         height="100%"
@@ -29,6 +67,7 @@ const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
         />:
         tableId === 1 && !tabSelected ?
         <iframe
+        //Poblation
         src={`https://latamdev.cloud.looker.com/embed/looks/20?show_title=false`}
         width="100%"
         height="100%"

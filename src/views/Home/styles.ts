@@ -22,3 +22,12 @@ export const Box = styled.div`
 
 export const Metrics = styled.div`
 `
+export const BoxTable = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+@media screen and (max-width: 768px) {
+flex-direction: column;
+}
+
+`

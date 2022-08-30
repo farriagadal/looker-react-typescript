@@ -4,7 +4,7 @@ import BoxEmbed from '../../components/BoxEmbed'
 import DashboardHome from '../../components/DashboardHome'
 import Embed from '../../components/Embed'
 import TableEmbed from '../../components/TableEmbed'
-import { Container, Box, Metrics } from './styles'
+import { Container, Box, BoxTable } from './styles'
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
       <Box>
         <DashboardHome />
       </Box>
-      <Box>
+      <BoxTable>
         <TableEmbed tableId={1} title={'Productividad'}/>
         <TableEmbed tableId={2} title={'Vacantes'}/>
-      </Box>
+      </BoxTable>
     </Container>
   )
 }
