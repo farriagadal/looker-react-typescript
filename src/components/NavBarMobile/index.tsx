@@ -24,7 +24,7 @@ const NavBarMobile = () => {
   return (
     <Container>
       {menuList.map((item: any, index: number) => (
-        <ListMenu to={item.route} key={index}>{item.name}</ListMenu>
+        <ListMenu to={item.route} key={index} exact>{item.name}</ListMenu>
       ))}
     </Container>
   )

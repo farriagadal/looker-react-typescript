@@ -103,7 +103,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
       <ListMenu>
         {menuList.map((item: any, index: number) => (
           <div key={index + item.name}>
-            <ItemMenu to={item.route}>
+            <ItemMenu to={item.route} exact>
               <img src={item.iconPath} alt={item.name} />
               <span>{item.name}</span>
             </ItemMenu>
@@ -111,7 +111,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
               item.subLinks && item.subLinks.length > 0 && (
                 <SubListMenu>
                   {item.subLinks.map((subItem: any, subIndex: number) => (
-                    <SubItemMenu to={subItem.route} key={subIndex + subItem.name}>
+                    <SubItemMenu to={subItem.route} exact key={subIndex + subItem.name}>
                       <span>{subItem.name}</span>
                     </SubItemMenu>
                   ))}

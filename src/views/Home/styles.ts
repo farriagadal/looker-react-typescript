@@ -43,6 +43,19 @@ export const BoxTable = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    row-gap: 24px;
+    row-gap: 60px;
+  }
+`
+
+
+export const Titles = styled.div`
+  display: flex;
+
+  h2:first-child {
+    margin-right: 25%;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 `

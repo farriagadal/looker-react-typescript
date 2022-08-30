@@ -4,13 +4,16 @@ import BoxEmbed from '../../components/BoxEmbed'
 import DashboardHome from '../../components/DashboardHome'
 import Embed from '../../components/Embed'
 import TableEmbed from '../../components/TableEmbed'
-import { Container, Box, BoxTable } from './styles'
+import { Container, Box, BoxTable, Titles } from './styles'
 
 const Home = () => {
   return (
     <Container>
       <h1>Dotación y Vacantes</h1>
-      <h2>Dotación</h2>
+      <Titles>
+        <h2>Datos clave</h2>
+        <h2>Dotación</h2>
+      </Titles>
       <Box>
         <DashboardHome />
       </Box>
