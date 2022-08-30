@@ -41,7 +41,7 @@ export const BoxTable = styled.div`
   column-gap: 24px;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1092px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     row-gap: 60px;
   }

@@ -1,12 +1,5 @@
 import styled from 'styled-components'
 
-/* export const MenuNav = styled.ul`
-  list-style: none;
-
-  li:hover ul {
-    visibility: visible;
-  }
-` */
 export const MenuNav = styled.ul`
   display: flex;
   flex-direction: column;
@@ -25,16 +18,16 @@ export const MenuNav = styled.ul`
   }
 
   li a {
+    display: flex;
     color: #303030;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    margin: 20px 0 -5px -20px;
+    margin: 21px 0px 0px -25px;
 
     span img {
       font-size: 1.3rem;
       color: blue;
-      margin-top: 5px;
       margin-right: 10px;
     }
   }

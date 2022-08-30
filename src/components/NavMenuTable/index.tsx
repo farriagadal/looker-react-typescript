@@ -6,9 +6,12 @@ import TableModal from '../TableModal'
 
 type PropNavTable = {
   propNav: any
+  name: any
+  subname:any
+  idTable: any
 }
 
-const NavMenuTable = ({propNav}: PropNavTable) => {
+const NavMenuTable = ({propNav, name, subname, idTable}: PropNavTable) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -38,7 +41,7 @@ const NavMenuTable = ({propNav}: PropNavTable) => {
 
   return (
     <>
-    {isOpen && <TableModal id={"modal"} onClose={() => setIsOpen(false)}/>}
+    {isOpen && <TableModal  name={name} subName={subname} idTable={idTable} onClose={() => setIsOpen(false)}/>}
 
     <MenuNav>
       <li>
