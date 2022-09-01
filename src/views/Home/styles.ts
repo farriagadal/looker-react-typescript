@@ -2,14 +2,14 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   padding: 48px 27px;
-  
+
   h1 {
     font-family: 'Latam Sans';
     font-style: italic;
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    color: #1B0088;
+    color: #1b0088;
     margin: 0;
     margin-bottom: 35px;
   }
@@ -32,9 +32,7 @@ export const Box = styled.div`
   display: flex;
 `
 
-
-export const Metrics = styled.div`
-`
+export const Metrics = styled.div``
 export const BoxTable = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -43,10 +41,16 @@ export const BoxTable = styled.div`
 
   @media screen and (max-width: 1092px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    :last-child {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
     row-gap: 60px;
   }
 `
-
 
 export const Titles = styled.div`
   display: flex;
