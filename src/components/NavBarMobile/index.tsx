@@ -9,22 +9,22 @@ const NavBarMobile = () => {
     },
     {
       name: 'Ingresos y Salidas',
-      route: '/dotacion/2'
+      route: '/entradas-y-salidas'
     },
     {
       name: 'Cuenta de remuneraciones',
-      route: '/dotacion/3'
+      route: '/cuentas-y-remuneraciones'
     },
     {
       name: 'RH Connect',
-      route: '/dotacion/4'
+      route: '/rh-connect'
     }
   ]
 
   return (
     <Container>
       {menuList.map((item: any, index: number) => (
-        <ListMenu to={item.route} key={index}>{item.name}</ListMenu>
+        <ListMenu to={item.route} key={index} exact>{item.name}</ListMenu>
       ))}
     </Container>
   )

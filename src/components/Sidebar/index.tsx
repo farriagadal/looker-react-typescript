@@ -30,15 +30,15 @@ const Sidebar = ({ onClose }: SideBarProps) => {
         },
         {
           name: 'Ingresos y Salidas',
-          route: '/dotacion/2'
+          route: '/entradas-y-salidas'
         },
         {
           name: 'Cuenta de remuneraciones',
-          route: '/dotacion/3'
+          route: '/cuentas-y-remuneraciones'
         },
         {
           name: 'RH Connect',
-          route: '/dotacion/4'
+          route: '/rh-connect'
         }
       ]
     },
@@ -103,7 +103,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
       <ListMenu>
         {menuList.map((item: any, index: number) => (
           <div key={index + item.name}>
-            <ItemMenu to={item.route}>
+            <ItemMenu to={item.route} exact>
               <img src={item.iconPath} alt={item.name} />
               <span>{item.name}</span>
             </ItemMenu>
@@ -111,7 +111,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
               item.subLinks && item.subLinks.length > 0 && (
                 <SubListMenu>
                   {item.subLinks.map((subItem: any, subIndex: number) => (
-                    <SubItemMenu to={subItem.route} key={subIndex + subItem.name}>
+                    <SubItemMenu to={subItem.route} exact key={subIndex + subItem.name}>
                       <span>{subItem.name}</span>
                     </SubItemMenu>
                   ))}

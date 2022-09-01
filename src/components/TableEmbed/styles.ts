@@ -6,7 +6,12 @@ export const ContainerPrincipal = styled.div`
   margin-right: 24px;
 =======
   margin-right: 10px;
+<<<<<<< HEAD
 >>>>>>> e82a4c6fdc122cb84ab76238e945aa4d43d160cc
+=======
+  width: 100%;
+  margin-top: 18px;
+>>>>>>> LastChange4
 
   h2 {
     font-size: 20px;
@@ -22,14 +27,13 @@ export const ContainerPrincipal = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    max-width: 388px;
     height: 326px;
   }
 `
 
 export const Container = styled.div`
   position: relative;
-  max-width: 572px;
+  width: 100%;
   height: 422px;
   border-radius: 10px;
   justify-content: center;
@@ -38,6 +42,7 @@ export const Container = styled.div`
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
   margin-bottom: 50px;
   overflow: hidden;
+  margin-right: 10px;
 
   iframe {
     height: 404px;
@@ -46,7 +51,6 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    max-width: 388px;
     height: 326px;
   }
 `
@@ -55,12 +59,13 @@ export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  a {
+
+  .menu {
+    width: 100%;
     font-weight: 600;
     font-size: 16px;
     line-height: 19.2px;
     text-align: center;
-    width: 114px;
     height: 44px;
     color: #929292;
     background-color: #ebebeb;
@@ -70,16 +75,16 @@ export const Menu = styled.div`
     cursor: pointer;
   }
 
-  a:first-child {
+  .menu:first-child {
     border-top-left-radius: 10px;
   }
 
-  a:last-child {
+  .menu:last-child {
     border-top-right-radius: 10px;
     border-right: none;
   }
 
-  a:hover {
+  .menu:hover {
     color: #1b0088;
     border-bottom: 2px solid #ed1650;
     background-color: white;
@@ -89,8 +94,23 @@ export const Menu = styled.div`
     color: #1b0088;
     border-bottom: 2px solid #ed1650;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
   }
 
   @media screen and (max-width: 768px) {
+  }
+`
+
+export const MenuList = styled.div`
+  margin-top: -2px;
+  cursor: pointer;
+  a {
+    background-color: #fff;
+    img:hover {
+      filter: invert(23%) sepia(93%) saturate(6437%) hue-rotate(336deg)
+        brightness(96%) contrast(93%);
+    }
   }
 `

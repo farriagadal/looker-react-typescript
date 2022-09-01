@@ -4,26 +4,23 @@ import BoxEmbed from '../../components/BoxEmbed'
 import DashboardHome from '../../components/DashboardHome'
 import Embed from '../../components/Embed'
 import TableEmbed from '../../components/TableEmbed'
-import { Container, Box, Metrics } from './styles'
+import { Container, Box, BoxTable, Titles } from './styles'
 
 const Home = () => {
   return (
     <Container>
       <h1>Dotación y Vacantes</h1>
+      <Titles>
+        <h2>Datos clave</h2>
+        <h2>Dotación</h2>
+      </Titles>
       <Box>
         <DashboardHome />
       </Box>
-      <Box>
-        <TableEmbed tableId={1} title={'Productividad'}/>
-        <TableEmbed tableId={2} title={'Vacantes'}/>
-      </Box>
-<<<<<<< HEAD
-      <Box>
-        <TableEmbed lookId={20} tableName={'Productividad'} />
-        <TableEmbed lookId={21} tableName={'Vacantes'} />
-      </Box>
-=======
->>>>>>> e82a4c6fdc122cb84ab76238e945aa4d43d160cc
+      <BoxTable>
+        <TableEmbed tableId={1} title={'Productividad'} />
+        <TableEmbed tableId={2} title={'Vacantes'} />
+      </BoxTable>
     </Container>
   )
 }
