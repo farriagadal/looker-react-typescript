@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const MenuNav = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-content: center;
   width: 143px;
   height: 104px;

@@ -1199,7 +1199,19 @@
   dependencies:
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@looker/sdk-rtl@^21.1.1", "@looker/sdk-rtl@^21.3.1":
+"@looker/sdk-node@^22.10.1":
+  "integrity" "sha512-82KyBdsWmeMNTIyfEH9uCej9bBULR+99OJGY87n4C6OJmdOl/07QOqSqXWBWAa1Y/4URttpvhpXBV54HOic7Zw=="
+  "resolved" "https://registry.npmjs.org/@looker/sdk-node/-/sdk-node-22.10.1.tgz"
+  "version" "22.10.1"
+  dependencies:
+    "@looker/sdk" "^22.10.1"
+    "@looker/sdk-rtl" "^21.3.4"
+    "ini" "^1.3.8"
+    "readable-stream" "^3.4.0"
+    "request" "^2.88.0"
+    "request-promise-native" "^1.0.8"
+
+"@looker/sdk-rtl@^21.3.1", "@looker/sdk-rtl@^21.3.4":
   "integrity" "sha512-k5iZvkVLaoFxzF0AViVtSA2bvvTyeKTkXxbupa/lPsA0fW1qyF+3BVmtMOK3JaC/ZzIf0VFQHdrbrHbaIEJBxA=="
   "resolved" "https://registry.npmjs.org/@looker/sdk-rtl/-/sdk-rtl-21.3.4.tgz"
   "version" "21.3.4"
@@ -1209,12 +1221,23 @@
     "request" "^2.88.0"
     "request-promise-native" "^1.0.8"
 
-"@looker/sdk@^21.18.1", "@looker/sdk@^21.20.1":
+"@looker/sdk@^21.20.1":
   "integrity" "sha512-t54yXAMeJAIeq7uUc1Oa3SdFsE3zvQaL9S28ebXy9TrljbnHG4FsVMacfq0XQGYPDzYUIoEySShWcBOsFZ+eyw=="
   "resolved" "https://registry.npmjs.org/@looker/sdk/-/sdk-21.20.1.tgz"
   "version" "21.20.1"
   dependencies:
     "@looker/sdk-rtl" "^21.3.1"
+    "ini" "^1.3.8"
+    "readable-stream" "^3.4.0"
+    "request" "^2.88.0"
+    "request-promise-native" "^1.0.8"
+
+"@looker/sdk@^22.10.1":
+  "integrity" "sha512-yOIveAMa/lMAKn8fTVe5ptFAgqma1T8iw1kC/aefWkPco64DJozUDTycoJBRyEDVmGhGaaug2vk0mPuUfxDYOQ=="
+  "resolved" "https://registry.npmjs.org/@looker/sdk/-/sdk-22.10.1.tgz"
+  "version" "22.10.1"
+  dependencies:
+    "@looker/sdk-rtl" "^21.3.4"
     "ini" "^1.3.8"
     "readable-stream" "^3.4.0"
     "request" "^2.88.0"

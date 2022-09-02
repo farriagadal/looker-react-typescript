@@ -87,6 +87,7 @@ const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
           width="100%"
           height="100%"
           frameBorder="0"
+          id='looker'
           />:
           tabSelected === 21 ?
           <iframe
