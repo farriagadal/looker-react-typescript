@@ -8,4 +8,4 @@ export const Container = styled.div`
   box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   width: 100%;
-`;
+`

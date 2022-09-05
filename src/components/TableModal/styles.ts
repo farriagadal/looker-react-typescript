@@ -31,6 +31,19 @@ h3{
     margin-top: 11px;
     margin-bottom: 22px;
 }
+
+iframe {
+
+    lk-explore-dataflux.look.embed lk-explore-header, lk-explore-dataflux.query lk-explore-header {
+    width: 100%;
+    height: 24px;
+    margin: 8px 0px;
+    padding: 0 8px;
+    /* borre zindex para ver si funcionaba */
+    background: blue;
+    border: 0 none;
+}
+}
 `
 
 export const Title = styled.div`
@@ -42,3 +55,6 @@ export const Title = styled.div`
     line-height: 29px;
     color: #1B0088;
 `
+let lkExploreHeader = document.querySelector("lk-explore-header");
+console.log(lkExploreHeader)
+

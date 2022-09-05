@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-export const MenuNav = styled.ul`
+export const MenuNav = styled.ul<{ nameTab: any }>`
   display: flex;
   flex-direction: column;
   align-content: center;
   width: 143px;
-  height: 104px;
+  height: 55px;
   position: absolute;
   background-color: #ffffff;
-  translate: -120px;
+  translate: ${props => props.nameTab === "UF1" ? 0 : "-120px"};
   border-radius: 4px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
 
@@ -31,4 +31,8 @@ export const MenuNav = styled.ul`
       margin-right: 10px;
     }
   }
+
+  @media screen and (max-width: 768px){
+      translate: -120px;
+    }
 `

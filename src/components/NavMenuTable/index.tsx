@@ -23,7 +23,7 @@ const NavMenuTable = ({ onCloseNav, titleModal, subNameModal, idTableModal }: Pr
     <>
       {isOpen && <TableModal titleModal={titleModal} subNameModal={subNameModal} idTableModal={idTableModal} onClose={() => setIsOpen(false)} />}
 
-      <MenuNav>
+      <MenuNav nameTab={subNameModal}>
         <li>
           <a onClick={handleClick}>
             <span>
@@ -32,14 +32,14 @@ const NavMenuTable = ({ onCloseNav, titleModal, subNameModal, idTableModal }: Pr
             Ver más
           </a>
         </li>
-        <li>
+       {/*  <li>
           <a href="">
             <span>
               <img src={Download} alt="download" />
             </span>
             Descargar
           </a>
-        </li>
+        </li> */}
       </MenuNav>
     </>
   )

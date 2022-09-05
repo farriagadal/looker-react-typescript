@@ -10,6 +10,7 @@ import LogoSrc from '../../assets/logo-latam.svg'
 import CloseIcon from '../../assets/icons/close.svg'
 import AvatarIcon from '../../assets/avatar.jpg'
 import RightIcon from '../../assets/icons/right.svg'
+import Footer from '../../components/Footer'
 
 type SideBarProps = {
   onClose: () => void
@@ -85,6 +86,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
         !isMobile
           ? <ImgLogo>
               <img src={LogoSrc} alt="logo" />
+              {/* <Footer/> */}
             </ImgLogo>
           : <MobileSection>
               <CloseButton onClick={onClose}>
@@ -121,6 +123,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
           </div>
         ))}
       </ListMenu>
+      <Footer/>
     </Container>
   )
 }
