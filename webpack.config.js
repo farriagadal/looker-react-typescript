@@ -78,54 +78,9 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        test: /\.(woff|woff2|ttf|otf|eot)$/,
+        type: 'asset/inline'
       }
-      // {
-      //   test: /\.(woff|woff2)$/,
-      //   use: [
-      //     {
-      //       loader: 'url-loader',
-      //       options: {
-      //         limit: 10000,
-      //       },
-      //     }
-      //   ]
-      // },
-      // { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
-      // {
-      //   test: /\.svg$/,
-      //   use: ['svg-loader']
-      // },
-      // {
-      //   test: /\.(woff|woff2|eot|ttf)([\?]?.*)$/,
-      //   use: ['file-loader']
-      // },
-      // { test: /\.(woff|woff2|eot|ttf)$/, use: ['url-loader?limit=100000']}
-      // {
-      //   test: /\.(woff)$/i,
-      //   type: 'asset/resource',
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         limit: 1000000,
-      //       },
-      //     },
-      //   ]
-      // }
-      // {
-      //   test: /\.(woff)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].woff',
-      //         esModule: false // <- here
-      //       }
-      //     }
-      //   ]
-      // }
     ],
   },
   resolve: {
