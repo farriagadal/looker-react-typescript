@@ -1,36 +1,25 @@
 import React, { useState } from 'react'
 import NavMenuTable from '../NavMenuTable'
-import { Container, Menu, ContainerPrincipal, MenuList } from './styles'
+import { Container, Menu, ContainerPrincipal, MenuList, Pagination } from './styles'
 import MoreVertical from '../../../public/icons/more-vertical.svg'
-
+import BackIconTable from '../../../public/icons/backIconTable.svg'
+import NextIconTable from '../../../public/icons/nextIconTable.svg'
 
 type TableEmbedProps = {
-  tableId: number,
+  tableId: number, // Uso posterior para identificar la tabla
   title: string
 }
 
 const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
-  const [tabSelected, setTabSelected] = useState(24)
 
+  const [tabSelected, setTabSelected] = useState(20)
   const [isOpenMenuTable, setIsOpenMenuTable] = useState(false)
-  const [propNav, setPropNav] = useState(5)
+  const [porMenu, setPorMenu] = useState(2)
+  const [menu, setMenu] = useState(1)
+  const isMobile = window.innerWidth < 768
 
-
-
-
-  const handleClick = (event: any) => {
-    event.preventDefault()
+  const handleClick = () => {
     setIsOpenMenuTable(!isOpenMenuTable)
-
-    if (tableId === 1 && tabSelected) {
-     setPropNav(1)
-    }else{
-      if
-      (tableId === 1 && !tabSelected){
-      setPropNav(2)
-      }
-    }
-
   }
 
   const menuItem = [
@@ -62,67 +51,69 @@ const TableEmbed = ({ tableId, title }: TableEmbedProps) => {
   ]
 
   return (
-      <ContainerPrincipal>
-        <h2>{title}</h2>
-        <Container>
-          
+    <ContainerPrincipal>
+      <h2>{title}</h2>
+      <Container>
         <Menu>
-          {menuItem.map((item, index) => (
-              <a key={index}
-              onClick={() => setTabSelected(item.idSelected)}
-              className={`menu ${tabSelected === item.idSelected && 'isSelected'}`}>
-              {item.name} {tabSelected === item.idSelected && <MenuList>
-              <a onClick={handleClick} >
-                <img src={MoreVertical} alt="Icon more-vertical" />
+          {isMobile ? (<><Pagination onClick={() => setMenu(menu - 1)}><img src={NextIconTable} alt="" /></Pagination>
+            {menuItem.slice((menu - 1) * porMenu, (menu - 1) * porMenu + 3).map((item, index) => (
+              <a
+                key={index}
+                onClick={() => setTabSelected(item.idSelected)}
+                className={`menu ${tabSelected === item.idSelected && 'isSelected'}`}>
+                {item.name}
+                {tabSelected === item.idSelected && <MenuList>
+                  <a onClick={handleClick} >
+                    <img src={MoreVertical} alt="Icon more-vertical" />
+                  </a>
+                  {
+                    isOpenMenuTable &&
+                    <NavMenuTable
+                      onCloseNav={() => setIsOpenMenuTable(false)}
+                      titleModal={title}
+                      subNameModal={item.name}
+                      idTableModal={item.idSelected}
+                    />
+                  }
+                </MenuList>}
               </a>
-              {isOpenMenuTable && <NavMenuTable name={title} subname={item.name} idTable={item.idSelected} propNav={propNav} />}
-            </MenuList>}</a>
-          ))}
-          </Menu>
+            ))}
+            <Pagination onClick={() => setMenu(menu + 1)}><img src={BackIconTable} alt="" /></Pagination>
+          </>
+          )
+            : (menuItem.map((item, index) => (
+              <a
+                key={index}
+                onClick={() => setTabSelected(item.idSelected)}
+                className={`menu ${tabSelected === item.idSelected && 'isSelected'}`}>
+                {item.name}
+                {tabSelected === item.idSelected && <MenuList>
+                  <a onClick={handleClick} >
+                    <img src={MoreVertical} alt="Icon more-vertical" />
+                  </a>
+                  {
+                    isOpenMenuTable &&
+                    <NavMenuTable
+                      onCloseNav={() => setIsOpenMenuTable(false)}
+                      titleModal={title}
+                      subNameModal={item.name}
+                      idTableModal={item.idSelected}
+                    />
+                  }
+                </MenuList>}
+              </a>
+            )))}
 
-          {(tabSelected === 20) ?
-          <iframe
-          //Rol
-          src={`https://latamdev.cloud.looker.com/embed/looks/20?show_title=false`}
+        </Menu>
+        <iframe
+          id='table-looker'
+          src={`https://latamdev.cloud.looker.com/embed/looks/${tabSelected}?show_title=false`}
           width="100%"
           height="100%"
           frameBorder="0"
-          />:
-          tabSelected === 21 ?
-          <iframe
-          //Poblation
-          src={`https://latamdev.cloud.looker.com/embed/looks/21?show_title=false`}
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          /> :
-         tabSelected === 22 ?
-            <iframe
-            //Poblation
-            src={`https://latamdev.cloud.looker.com/embed/looks/22?show_title=false`}
-            width="100%"
-            height="100%"
-            frameBorder="0"
-              /> :
-              tabSelected === 23 ?
-              <iframe
-              //Poblation
-              src={`https://latamdev.cloud.looker.com/embed/looks/23?show_title=false`}
-              width="100%"
-              height="100%"
-              frameBorder="0"
-                /> :
-                 
-                <iframe
-                //Poblation
-                src={`https://latamdev.cloud.looker.com/embed/looks/21?show_title=false`}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-              /> 
-          }
-        </Container>
-      </ContainerPrincipal>
+        />
+      </Container>
+    </ContainerPrincipal>
   )
 }
 

@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
-import {Container, Overley, Title} from './styles'
+import { Container, Overley, Title } from './styles'
 
 type IdModal = {
   onClose: () => void
-  name: string
-  subName: string
-  idTable: string
+  titleModal: string
+  subNameModal: string
+  idTableModal: number
 }
 
-const TableModal = ({ onClose, name, subName, idTable }: IdModal) => {
+const TableModal = ({ onClose, titleModal, subNameModal, idTableModal }: IdModal) => {
 
- 
+
   return (
-    <Overley  onClick={() => onClose()}>
+    <Overley onClick={() => onClose()}>
       <Container>
-          <Title>{name}</Title>
-          <h3>{subName}</h3> {/* prop */}
-          <iframe
-          src={`https://latamdev.cloud.looker.com/embed/looks/${idTable}?show_title=false`}
+        <Title>{titleModal}</Title>
+        <h3>{subNameModal}</h3> {/* prop */}
+        <iframe
+          src={`https://latamdev.cloud.looker.com/embed/looks/${idTableModal}?show_title=false`}
           width="100%"
           height="379px"
           frameBorder="0"
-          />
+        />
       </Container>
     </Overley>
   )

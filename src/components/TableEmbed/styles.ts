@@ -38,13 +38,17 @@ export const Container = styled.div`
   margin-right: 10px;
 
   iframe {
-    height: 404px;
+    max-height: 404px;
     padding-left: 8px;
     padding-right: 8px;
   }
 
   @media screen and (max-width: 768px) {
     height: 326px;
+
+    iframe {
+      height: 310px;
+    }
   }
 `
 
@@ -94,6 +98,15 @@ export const Menu = styled.div`
 
   @media screen and (max-width: 768px) {
   }
+`
+export const Pagination = styled.a`
+  display: flex;
+  align-items: center;
+  max-width: 44px;
+  width: 100%;
+  color: #929292;
+  background-color: #ebebeb;
+  border-right: 1px solid #ffffff;
 `
 
 export const MenuList = styled.div`
