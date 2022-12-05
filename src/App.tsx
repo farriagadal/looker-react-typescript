@@ -15,15 +15,6 @@ export const App = hot(() => (
       <Layout>
         <Switch>
           <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/entradas-y-salidas">
-            <IncomeExits />
-          </Route>
-          <Route exact path="/cuentas-y-remuneraciones">
-            <RemunerationAccount />
-          </Route>
-          <Route exact path="/rh-connect">
             <RHConnect />
           </Route>
         </Switch>
