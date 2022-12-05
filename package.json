@@ -6,11 +6,11 @@
   "author": "yournamehere",
   "license": "Apache-2.0",
   "scripts": {
-    "analyze": "set ANALYZE_MODE=static && yarn build",
-    "build": "set BABEL_ENV=build && webpack --config webpack.prod.js",
+    "analyze": "export ANALYZE_MODE=static && yarn build",
+    "build": "export BABEL_ENV=build && webpack --config webpack.prod.js",
     "clean": "rm -rf dist",
     "develop": "webpack serve --hot --port 8080 --disable-host-check --config webpack.develop.js",
-    "prebuild": "yarn clean"
+    "prebuild": "npm run clean"
   },
   "dependencies": {
     "@looker/components": "^2.8.9",
