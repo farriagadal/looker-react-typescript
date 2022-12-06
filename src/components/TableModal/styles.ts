@@ -22,7 +22,7 @@ border-radius: 8px;
 overflow: hidden;
 
 h3{
-    font-family: 'Latam Sans';
+    font-family: 'Plus Jakarta Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -35,7 +35,7 @@ h3{
 
 export const Title = styled.div`
     padding-top: 19px;
-    font-family: 'Latam Sans';
+    font-family: 'Plus Jakarta Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

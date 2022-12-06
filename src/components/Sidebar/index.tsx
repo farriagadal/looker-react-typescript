@@ -1,23 +1,18 @@
 import React from 'react'
 import {
   Container, ImgLogo, ListMenu,
-  ItemMenu, SubListMenu, SubItemMenu,
-  MobileSection, Avatar, Name,
-  CloseButton
+  ItemMenu, SubListMenu, SubItemMenu, MenuBtn,
+  Welcome
 } from './styles'
 import { NavLink } from 'react-router-dom'
-import LogoSrc from '../../assets/logo-latam.svg'
-import CloseIcon from '../../assets/icons/close.svg'
-import AvatarIcon from '../../assets/avatar.jpg'
-import RightIcon from '../../assets/icons/right.svg'
+import LogoSrc from '../../assets/logo-falabella.svg'
+import MenuIcon from '../../assets/icons/menu.svg'
 
 type SideBarProps = {
-  onClose: () => void
+  // onClose: () => void
 }
 
-const Sidebar = ({ onClose }: SideBarProps) => {
-  const isMobile = window.innerWidth < 768
-
+const Sidebar = () => {
   const menuList = [
     {
       name: 'Inicio',
@@ -79,27 +74,15 @@ const Sidebar = ({ onClose }: SideBarProps) => {
     }
   ]
 
+  const onClose = () => {
+    console.log('close')
+  }
+
   return (
     <Container>
-      {
-        !isMobile
-          ? <ImgLogo>
-              <img src={LogoSrc} alt="logo" />
-            </ImgLogo>
-          : <MobileSection>
-              <CloseButton onClick={onClose}>
-                <img src={CloseIcon} />
-              </CloseButton>
-              <Avatar>
-                <img src={AvatarIcon} alt="avatar" />
-              </Avatar>
-              <Name>
-                <p>Paula Fernandez</p>
-                <img src={RightIcon} />
-                <span>Ver perfil</span>
-              </Name>
-            </MobileSection>
-      }
+      <MenuBtn><img src={MenuIcon} alt="logo" /></MenuBtn>
+      <ImgLogo><img src={LogoSrc} alt="logo" /></ImgLogo>
+      <Welcome>Hola, Constanza!</Welcome>
       <ListMenu>
         {menuList.map((item: any, index: number) => (
           <div key={index + item.name}>

@@ -2,12 +2,11 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const Container = styled.div`
-  background-color: #1B0088;
-  width: 231px;
-  padding-top: 40px;
-  padding-left: 24px;
-
-  @media only screen and (max-width: 600px) {
+  background: #E2E2E2;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.1);
+  min-width: 269px;
+  padding-top: 25px;
+  /* @media only screen and (max-width: 600px) {
     width: 328px;
     min-width: 328px;
     position: fixed;
@@ -15,19 +14,20 @@ export const Container = styled.div`
     min-height: 100vh;
     animation: slide 0.5s forwards;
     left: -300px;
-  }
-
+  } */
+/* 
   @keyframes slide {
     100% { left: 0; }
-  }
+  } */
 `
 export const ImgLogo = styled.div`
-  width: 500px;
+  display: flex;
+  justify-content: center;
 `
 export const ListMenu = styled.div`
   display: block;
-  padding-left: 5px;
   margin-top: 68px;
+  padding-left: 24px;
 
   @media only screen and (max-width: 600px) {
     margin-top: 36px;
@@ -48,7 +48,7 @@ export const ItemMenu = styled(NavLink)`
   }
 
   span {
-    font-family: 'Latam Sans';
+    font-family: 'Plus Jakarta Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -74,7 +74,7 @@ export const SubItemMenu = styled(NavLink)`
   }
 
   span {
-    font-family: 'Latam Sans';
+    font-family: 'Plus Jakarta Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -88,60 +88,21 @@ export const SubItemMenu = styled(NavLink)`
   }
 `
 
-export const MobileSection = styled.div`
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-top: 40px;
-  margin-right: 14px;
-  padding-bottom: 24px;
-  border-bottom: solid 1px #ddd;
-`
 
-export const Avatar = styled.div`
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #1B0088;
-  overflow: hidden;
-  cursor: pointer;
-
-  img {
-    width: 56px;
-    height: 56px;
-  }
-`
-export const Name = styled.div`
-  position: relative;
-  width: 250px;
-  margin-left: 16px;
-
-  p {
-    font-family: 'Latam Sans';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 20px;
-    color: #FFFFFF;
-    margin: 0;
-  }
-
-  img {
-    position: absolute;
-    right: 0;
-    top: 5px;
-  }
-
-  span {
-    font-family: 'Latam Sans';
-    font-weight: 400;
-    font-size: 14px;
-    color: #FFFFFF;
-  }
-`
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: -50px;
-  background: none;
+export const MenuBtn = styled.button`
   border: none;
+  background: none;
+  padding: 0;
+  position: absolute;
+  top: 25px;
+  left: 29px;
+`
+
+export const Welcome = styled.h2`
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #000000;
+  margin-top: 20px;
 `
